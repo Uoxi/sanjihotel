@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/LOGO.PNG" type="image/x-icon">
+    <title>Hôtel SANJI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <nav class="navbar">
+            <div class="logo">Hôtel SANJI</div>
+            <ul class="nav-links">
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#rooms">Chambres</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="login.html">Staff</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1>Bienvenue à l'Hôtel SANJI</h1>
+            <p>Un séjour d'exception dans un cadre somptueux.</p>
+            <a href="Reservation.html" class="btn">Réserver votre chambre ici</a>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>À propos de nous</h2>
+            <p>Situé au cœur d'un paysage idyllique, l'Hôtel SANJI offre une expérience unique où le luxe rencontre la sérénité. Profitez d'un service personnalisé et d'installations de classe mondiale.</p>
+        </div>
+    </section>
+
+    <section id="rooms" class="section">
+        <div class="container">
+            <h2>Nos Chambres</h2>
+            <div class="room-grid">
+                <div class="room">
+                    <img src="images/suite présidentiel.jpg" alt="Single Suite">
+                    <h3>Suite Présidentiel</h3>
+                    <p>(A partir de 150€)</p>
+                    <p>Un espace raffiné avec vue panoramique et équipements haut de gamme.</p>
+                </div>
+                <div class="room">
+                    <img src="images/chambre double.jpg" alt="Chambre Deluxe">
+                    <h3>Chambre Double</h3>
+                    <p>(A partir de 80€)</p>
+                    <p>Confort et élégance pour un séjour inoubliable.</p>
+                </div>
+                <div class="room">
+                    <img src="images/single.jpg" alt="Chambre Standard">
+                    <h3>Chambre Single</h3>
+                    <p>(A partir de 50€)</p>
+                    <p>Un choix parfait pour combiner simplicité et sophistication.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <div class="container">
+            <h2>Nos Services</h2>
+            <ul class="services-list">
+                <li>Spa et bien-être</li>
+                <li>Restaurant gastronomique</li>
+                <li>Piscine à débordement</li>
+                <li>Conciergerie 24/7</li>
+                <li>Excursions personnalisées</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2>Les plus grandes célébrités venu chez nous. </h2>
+            <p>Découvrez les plus grandes stars du monde venu dans notre Hotel.</p>
+            <div class="gallery-grid">
+                <img src="images/messi.jpg" alt="Lobby de l'hôtel">
+                <img src="images/lewandoski.jpg" alt="Piscine de l'hôtel">
+                <img src="images/raphinha.jpg" alt="Restaurant gastronomique">
+                <img src="images/zlatan.jpg" alt="Restaurant gastronomique">
+                <img src="images/mbappé.jpg" alt="Restaurant gastronomique">
+                <img src="images/benzema.jpg" alt="Restaurant gastronomique">
+                <img src="images/roni.jpeg" alt="Restaurant gastronomique">
+                <img src="images/beckham.jpg" alt="Restaurant gastronomique">
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="section">
+        <div class="container">
+            <h2>Avis Clients</h2>
+            <div class="reviews-grid">
+                <div class="review">
+                    <p>"Un séjour inoubliable, tout était parfait !"</p>
+                    <div class="stars">★★★★★</div>
+                    <h4>- Messi L.</h4>
+                </div>
+                <div class="review">
+                    <p>"Excellente qualité de service et très beau cadre."</p>
+                    <div class="stars">★★★★☆</div>
+                    <h4>- Raphinha B.</h4>
+                </div>
+                <div class="review">
+                    <p>"Belle expérience, mais le spa était un peu bondé."</p>
+                    <div class="stars">★★★★☆</div>
+                    <h4>- Lewandowski R.</h4>
+                </div>
+                <div class="review">
+                    <p>"Un séjour super, tout était propre mais juste une piscine un peu bondé."</p>
+                    <div class="stars">★★★★☆</div>
+                    <h4>- Ronaldo C.</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contactez-nous</h2>
+            <p>Pour toute demande de réservation ou d'information, veuillez nous contacter.</p>
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                <!-- Replace with your Access Key -->
+                <input type="hidden" name="access_key" value="1ef68453-eb8c-4f98-9a68-0d70f879ac12">
+
+                <!-- Form Inputs. Each input must have a name="" attribute -->
+                <input type="text" name="name" placeholder="Votre nom" required>
+                <input type="email" name="email" placeholder="Votre email" required>
+                <textarea name="message" placeholder="Votre message" required></textarea>
+
+                <!-- Honeypot Spam Protection -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                <button type="submit" class="btn">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Hôtel SANJI. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>

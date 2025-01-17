@@ -1,0 +1,452 @@
+/* Global Styles */
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/Hotel.jpg');
+    color: #333;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    z-index: 10;
+}
+
+.navbar .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #b9935a;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #fff;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.nav-links li a:hover {
+    color: #b9935a;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('images/Hotel.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding-top: 80px; /* Space for the fixed navbar */
+    text-align: center;
+}
+
+.hero-content {
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: #88ff7b;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    background-color: #b9935a;
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(185, 147, 90, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.hero .btn:hover {
+    background-color: #a57c4b;
+    box-shadow: 0 6px 20px rgba(185, 147, 90, 0.4);
+    transform: translateY(-3px);
+}
+
+/* Section Styling */
+.section {
+    padding: 50px 0;
+    background: #d4a969;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #b9935a;
+    border-bottom: 2px solid #b9935a;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+/* Room Grid */
+.room-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.room {
+    background: linear-gradient(145deg, #fdfdfd, #f5f5f5);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.room:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.room img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.room h3 {
+    font-size: 1.6rem;
+    color: #b9935a;
+    margin-bottom: 10px;
+}
+
+.room p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.room span {
+    display: block;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Services Section */
+.services-list {
+    list-style: none;
+    font-size: 1.1rem;
+    color: #555;
+    padding-left: 0;
+}
+
+.services-list li {
+    margin-bottom: 12px;
+}
+
+.services-list li:before {
+    content: "✓";
+    color: #b9935a;
+    margin-right: 10px;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 12px 20px;
+    border: 2px solid #b9935a;
+    border-radius: 10px;
+    background: #fafafa;
+    font-size: 16px;
+    color: #333;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form button {
+    background-color: #b9935a;
+    color: #fff;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(185, 147, 90, 0.4);
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+    background-color: #a57c4b;
+    box-shadow: 0 6px 20px rgba(185, 147, 90, 0.5);
+    transform: translateY(-3px);
+}
+
+/* Footer */
+.footer {
+    background: rgba(0, 0, 0, 0.7);
+    color: #b98b35;
+    padding: 30px;
+    text-align: center;
+}
+
+.footer p {
+    font-size: 1rem;
+}
+
+.social-links {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links li a {
+    color: #b98b35;
+    font-size: 1.2rem;
+}
+
+.social-links li a:hover {
+    color: #b9935a;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px; /* Espacement entre le logo et le titre */
+}
+
+.logo img {
+    max-width: 150px; /* Limite la largeur de l'image */
+    height: auto; /* Conserve les proportions de l'image */
+    border-radius: 15px; /* Coins arrondis pour un look élégant */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Ajout d'ombre portée */
+    transition: transform 0.3s ease-in-out; /* Effet de zoom au survol */
+}
+
+.logo img:hover {
+    transform: scale(1.1); /* Légère augmentation de la taille au survol */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Renforcement de l'ombre au survol */
+}
+
+#reviews {
+    background-color: #d4a969;
+    padding: 50px 0;
+}
+
+.reviews-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.review {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+}
+
+.review p {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.stars {
+    font-size: 1.5rem;
+    color: #ffc107; /* Couleur dorée pour les étoiles */
+    margin: 10px 0;
+}
+
+.review h4 {
+    font-weight: bold;
+    color: #333;
+}
+
+
+#gallery {
+    background-color: #d4a969;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Augmente la largeur minimale des colonnes */
+    gap: 30px; /* Espace entre les images */
+    margin-top: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto; /* Conserve le ratio des images */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre plus marquée pour les grandes images */
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.08); /* Effet au survol légèrement accentué */
+}
+
+/* Style général pour le modal */
+.custom-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.custom-modal.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Contenu du modal */
+.modal-content {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    max-width: 450px;
+    width: 90%;
+    text-align: center;
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Animation de fade-in du modal */
+@keyframes fadeIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Message dans le modal */
+.modal-content p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Bouton de fermeture - Croix animée */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.close-btn:hover {
+    transform: rotate(90deg);
+}
+
+/* Effet de survol pour la croix */
+.close-btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.8);
+}
+
+/* Style des boutons et du texte dans le modal */
+.modal-content button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #45a049;
+}
+
+/* Pour les petits écrans (Mobile responsive) */
+@media (max-width: 600px) {
+    .modal-content {
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    .close-btn {
+        font-size: 24px;
+        top: 5px;
+        right: 5px;
+    }
+}
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/LOGO.PNG" type="image/x-icon">
+    <title>Hotel SANJI - Reservation System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Logo Section -->
+        <div class="logo">
+            <img src="images/LOGO.PNG" alt="Hotel SANJI Logo" style="max-width: 1500px; height: auto; display: block; margin: 0 auto;">
+        </div>
+        
+        <h1>Hotel SANJI - Reservation System</h1>
+        
+        <!-- Menu Buttons -->
+        <div class="menu">
+            <button onclick="showAddReservation()">Nouvelle Reservation</button>
+            <button onclick="showCancelReservation()">Annuler Reservation</button>
+            <button onclick="showAvailableRooms()">Voir Chambres Disponibles</button>
+        </div>
+
+        <!-- Content Area -->
+        <div class="content" id="content">
+            <p>Welcome to the Hotel Reservation System. Choose an option from the menu above.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,307 @@
+/* styles.css */
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('images/Hotel.jpg');
+    color: #333;
+    background-size: cover; /* L'image couvre toute la surface */
+    background-position: center; /* Centrer l'image */
+    background-repeat: no-repeat; /* Ne pas répéter l'image */
+    height: 100vh; /* S'assurer que l'image couvre toute la hauteur de la fenêtre */
+    margin: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background: linear-gradient(145deg, #ffffff, #f2f2f2);
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #b9935a;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    background: #b9935a;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(185, 147, 90, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background: #a57c4b;
+    box-shadow: 0 6px 15px rgba(185, 147, 90, 0.6);
+    transform: translateY(-2px);
+}
+
+.content {
+    padding: 20px;
+    background: #ffffff;
+    border: 2px solid #b9935a;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form input, form select {
+    padding: 10px;
+    border: 2px solid #b9935a;
+    border-radius: 10px;
+    background: #fafafa;
+    font-size: 16px;
+    color: #333;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-weight: bold;
+    font-size: 18px;
+    color: #555;
+}
+
+form button {
+    align-self: flex-start;
+    background: #b9935a;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 25px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 4px 10px #a57c4b;
+}
+
+form button:hover {
+    background: #a57c4b;
+    box-shadow: 0 6px 15px #745836;
+    transform: translateY(-2px);
+}
+
+.room {
+    padding: 15px;
+    border: 2px solid #b9935a;
+    margin: 15px 0;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #fdfdfd, #f5f5f5);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.room:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.room span {
+    display: block;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.room span strong {
+    color: #b9935a;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #333;
+    border-bottom: 2px solid #b9935a;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px; /* Espacement entre le logo et le titre */
+}
+
+.logo img {
+    max-width: 150px; /* Limite la largeur de l'image */
+    height: auto; /* Conserve les proportions de l'image */
+    border-radius: 15px; /* Coins arrondis pour un look élégant */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Ajout d'ombre portée */
+    transition: transform 0.3s ease-in-out; /* Effet de zoom au survol */
+}
+
+.logo img:hover {
+    transform: scale(1.1); /* Légère augmentation de la taille au survol */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Renforcement de l'ombre au survol */
+}
+
+/* Style général pour le modal */
+.custom-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.custom-modal.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Contenu du modal */
+.modal-content {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    max-width: 450px;
+    width: 90%;
+    text-align: center;
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Animation de fade-in du modal */
+@keyframes fadeIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Message dans le modal */
+.modal-content p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Bouton de fermeture - Croix animée */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 0.1px;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.close-btn:hover {
+    transform: rotate(90deg);
+}
+
+/* Style du bouton de fermeture (la croix) */
+.close-btn:before {
+    content: "×";
+    font-size: 36px;
+    color: #ff5c5c;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.close-btn:hover:before {
+    color: #ff0000;
+    transform: rotate(180deg);
+}
+
+/* Effet de survol pour la croix */
+.close-btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.8);
+}
+
+/* Style du fond d'écran qui s'assombrit */
+.custom-modal {
+    animation: fadeBackground 0.3s ease;
+}
+
+/* Animation du fond */
+@keyframes fadeBackground {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    to {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+}
+
+/* Ajout d'un petit effet de zoom sur la croix */
+.close-btn:hover {
+    transform: rotate(90deg) scale(1.2);
+}
+
+/* Style des boutons et du texte dans le modal */
+.modal-content button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #45a049;
+}
+
+/* Pour les petits écrans (Mobile responsive) */
+@media (max-width: 600px) {
+    .modal-content {
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    .close-btn {
+        font-size: 24px;
+        top: 5px;
+        right: 5px;
+    }
+
+    .close-btn:before {
+        font-size: 32px;
+    }
+}
